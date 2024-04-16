@@ -1,0 +1,41 @@
+:root {
+    --font-size-search: 1rem;
+}
+
+/* Utility Classes */
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.form {
+    justify-content: flex-end;
+}
+
+button,
+input {
+    background-color: transparent;
+    border: none;
+}
+
+button {
+    border-radius: 16px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    font-size: var(--font-size-search);
+    outline: none;
+}
+
+.error-msg {
+    display: none;
+}
