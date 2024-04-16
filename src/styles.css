@@ -5,15 +5,6 @@
     --search-error: #FF1B1C;
 }
 
-/* Main */
-.main-container {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./Img/night-sky.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* Utility Classes */
 * {
     margin: 0;
@@ -25,9 +16,26 @@
     display: flex;
 }
 
+/* Main */
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./Img/night-sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-weather-display {
+    color: var(--search-color);
+}
+
 /* Search Bar */
 .form {
     justify-content: flex-end;
+}
+
+.column {
+    flex-direction: column;
 }
 
 button,
@@ -61,3 +69,5 @@ input {
 .error-msg {
     display: none;
 }
+
+/* Weather Details */
