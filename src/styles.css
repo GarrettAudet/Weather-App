@@ -85,10 +85,6 @@ input {
     outline: none;
 }
 
-.error-msg {
-    displayt color: red;
-}
-
 /* Weather Details */
 .main-weather-display-container {
     flex-grow: 1;
