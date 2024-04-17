@@ -32,7 +32,7 @@ function updateWeatherUI(data) {
 // Retrieve Current Weather Data
 async function handleDataQuery(inputtedCity) {
   const apiKey = 'bb573b7d76e6418981883643241104';
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${inputtedCity}`;
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${inputtedCity}`;
 
   // Attempt to Fetch Data
   try {
