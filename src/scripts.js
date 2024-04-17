@@ -1,3 +1,18 @@
+// Update Weather UI
+function updateWeatherUI(data) {
+  const { feelslike_f: feelsLikeF, wind_mph: wind, humidity, temp_f: temperatureF } = data.current;
+  const { name: city } = data.location;
+  const { text: forecast } = data.current.condition;
+
+  document.getElementById('feel').textContent = `${feelsLikeF}`;
+  document.getElementById('wind').textContent = `${wind} mph`;
+  document.getElementById('humidity').textContent = `${humidity}%`;
+  document.getElementById('degree').textContent = `${temperatureF}`;
+  document.getElementById('forecast').textContent = `${forecast.toUpperCase()}`;
+  document.getElementById('city').textContent = `${city.toUpperCase()}`;
+}
+
+// Retrieve Current Weather Data
 async function handleDataQuery(inputtedCity) {
   const apiKey = 'bb573b7d76e6418981883643241104';
   const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${inputtedCity}`;
@@ -9,12 +24,7 @@ async function handleDataQuery(inputtedCity) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    const feelsLikeF = data.current.feelslike_f;
-    const wind = data.current.wind_mph;
-    const humidity = data.current.humidity; 
-    const temperatureF = data.current.temp_f;
-    const city = data.location.name;
-    const forecast = data.current.condition.text;
+    updateWeatherUI(data);
   } catch (e) {
     console.log('Failed to fetch weather data:', e);
   }
