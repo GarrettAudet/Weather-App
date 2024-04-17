@@ -55,6 +55,8 @@ function retrieveData() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  handleDataQuery('Vancouver');
+
     const myButton = document.querySelector('.submission');
   
     myButton.addEventListener('keydown', (event) => {
