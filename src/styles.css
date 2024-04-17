@@ -3,6 +3,7 @@
     --search-background-color: rgba(163, 163, 163, 0.3);
     --search-color: white;
     --search-error: #FF1B1C;
+    --gap-between: 30px;
 }
 
 /* Utility Classes */
@@ -77,6 +78,7 @@ input {
 /* Weather Details */
 .main-weather-display-container {
     flex-grow: 1;
+
 }
 
 .main-weather-display {
@@ -84,4 +86,24 @@ input {
     top: 30%;
     left: 10%;
     color: var(--search-color);
+}
+
+.main-weather-display h1 {
+    line-height: 1;
+}
+
+.degrees {
+    font-size: 7.5rem;
+    font-weight: bold;
+}
+
+.main-characteristics {
+    gap: var(--gap-between);
+}
+
+.weather-content {
+    padding-left: var(--gap-between);
+    border-left: 2px solid white;
+    font-weight: 300;
+    gap: 10px;
 }
