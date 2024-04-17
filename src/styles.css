@@ -111,7 +111,7 @@ input {
 
 .feel::after {
     font-size: 0.75em;
-    top: -1em;
+    top: -.8em;
 }
 
 .main-characteristics {
