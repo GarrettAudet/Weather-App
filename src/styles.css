@@ -97,6 +97,23 @@ input {
     font-weight: bold;
 }
 
+.degrees::after,
+.feel::after {
+    position: relative;
+    content: "°F";
+    font-size: 0.25em;
+}
+
+.degrees::after {
+    vertical-align: top;
+    top: .5em;
+}
+
+.feel::after {
+    font-size: 0.75em;
+    top: -1em;
+}
+
 .main-characteristics {
     gap: var(--gap-between);
 }
