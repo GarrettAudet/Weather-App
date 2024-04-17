@@ -48,12 +48,6 @@ async function handleDataQuery(inputtedCity) {
   }
 }
 
-// Retrieve User Input
-function retrieveData() {
-  const myButton = document.querySelector('.submission');
-  handleDataQuery();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   handleDataQuery('Vancouver');
 
