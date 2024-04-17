@@ -1,5 +1,22 @@
+// Display Incorrect Search
+function displayErrorMessage (status) {
+  console.log('working');
+  const errorMessage = document.querySelector('.error-msg'); 
+
+  if (status === true){
+    console.log('workinggg');
+    errorMessage.style.display = 'block';
+
+  } else {
+    errorMessage.style.display = 'none'; 
+
+  }
+}
+
 // Update Weather UI
 function updateWeatherUI(data) {
+  displayErrorMessage(false);
+
   const { feelslike_f: feelsLikeF, wind_mph: wind, humidity, temp_f: temperatureF } = data.current;
   const { name: city } = data.location;
   const { text: forecast } = data.current.condition;
@@ -27,6 +44,7 @@ async function handleDataQuery(inputtedCity) {
     updateWeatherUI(data);
   } catch (e) {
     console.log('Failed to fetch weather data:', e);
+    displayErrorMessage(true);
   }
 }
 

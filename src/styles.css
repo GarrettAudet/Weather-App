@@ -69,6 +69,7 @@ button {
 
 .error-msg {
     font-size: 0.75rem;
+    color: red;
 }
 
 input,
@@ -85,7 +86,7 @@ input {
 }
 
 .error-msg {
-    color: red;
+    displayt color: red;
 }
 
 /* Weather Details */
