@@ -4,6 +4,7 @@
     --search-color: white;
     --search-error: #FF1B1C;
     --gap-between: 30px;
+    --margin-search: 1.5rem;
 }
 
 /* Utility Classes */
@@ -25,6 +26,12 @@
     align-items: center;
 }
 
+.align-items-end {
+    margin-right: var(--margin-search);
+    padding-left: var(--margin-search);
+    align-items: flex-end;
+}
+
 /* Main */
 .main-container {
     width: 100vw;
@@ -36,6 +43,8 @@
 
 /* Search Bar */
 .form {
+    padding: 0px;
+    margin: 0px;
     justify-content: flex-end;
 }
 
@@ -53,9 +62,13 @@ button {
     background-color: var(--search-background-color);
     border-radius: 0.5rem;
     padding: 10px;
-    margin: 1.5rem;
+    margin: var(--margin-search) var(--margin-search) 0rem var(--margin-search);
     width: 250px;
     color: var(--search-color);
+}
+
+.error-msg {
+    font-size: 0.75rem;
 }
 
 input,
@@ -72,7 +85,7 @@ input {
 }
 
 .error-msg {
-    display: none;
+    color: red;
 }
 
 /* Weather Details */
@@ -98,7 +111,7 @@ input {
 }
 
 .degrees::after,
-.feel::after {
+#feel::after {
     position: relative;
     content: "°F";
     font-size: 0.25em;
@@ -109,7 +122,7 @@ input {
     top: .5em;
 }
 
-.feel::after {
+#feel::after {
     font-size: 0.75em;
     top: -.8em;
 }
